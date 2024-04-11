@@ -277,9 +277,8 @@ function updatePicture(playerX, playerY, catPositions, zombiePositions) {
     pictureIndex = Math.min(Math.max(pictureIndex, 0), pictures.length - 1);
     let picture = pictures[pictureIndex];
     let pictureElement = document.querySelector(".picture");
-    pictureElement.style.backgroundImage = `url(https://thesuperfalcon.github.io/ZombiesAndCats/images/${picture}.jpg)`;
+    pictureElement.src = `images/${picture}.jpg`; 
 }
-
 function norrisApi(query) {
     const apiUrl = `https://api.chucknorris.io/jokes/search?query=${query}`;
 
