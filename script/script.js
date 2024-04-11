@@ -276,7 +276,8 @@ function updatePicture(playerX, playerY, catPositions, zombiePositions) {
     let pictureIndex = currentPlayerPicture.x * 7 + currentPlayerPicture.y;
     pictureIndex = Math.min(Math.max(pictureIndex, 0), pictures.length - 1);
     let picture = pictures[pictureIndex];
-    pictureElement.style.backgroundImage = `url(./images/${picture}.jpg)`;
+    let pictureElement = document.querySelector(".picture");
+    pictureElement.style.backgroundImage = `url(../images/${picture}.jpg)`;
 }
 
 function norrisApi(query) {
