@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="picture"></div>
+        <div class="counterbox">
+            <div class="counter" id="step-counter"></div>
+            <div class="counter" id="cat-counter"></div>
+            <div class="counter" id="zombie-counter"></div>
+            <div class="counter" id="button" onclick="displayJoke()">Press...</div>
+        </div>
+        <div class="text" id="text"></div>
+        <div class="movementbox">
+            <button id="up" class="movementarrow" onclick="movePlayer('up')">&#9650;</button>
+            <button id="down" class="movementarrow" onclick="movePlayer('down')">&#9660;</button>
+            <button id="left" class="movementarrow" onclick="movePlayer('left')">&#9664;</button>
+            <button id="right" class="movementarrow" onclick="movePlayer('right')">&#9654;</button>
+        </div>
+        <div class="map" id="map"></div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>

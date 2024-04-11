@@ -1,0 +1,166 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #111; /* Darker background color */
+    background-image: url(../images/scaryforest.jpg);
+}
+
+table {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+    width: 70vw;
+    max-width: 90vw; /* Added max-width to prevent overflow on small screens */
+    background-color: rgb(34, 34, 34);
+}
+
+.picture {
+    height: 25vh;
+    width: 90%; /* Adjusted width for better proportion on smaller screens */
+    max-width: 300px; /* Added max-width to prevent oversized image on small screens */
+    position: absolute;
+    top: 2rem;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid #555; /* Border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.counterbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 25vh;
+    width: 14vw;
+    top: 2rem;
+    right: 5%; /* Adjusted right position for better placement on smaller screens */
+}
+
+.counter {
+    display: flex;
+    position: relative;
+    background-color: #a64000; /* Darker orange for counter */
+    width: 100%; /* Adjusted width for better proportion on smaller screens */
+    max-width: 200px; /* Added max-width to prevent oversized counter box on small screens */
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    border: 2px solid #555; /* Border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+.text {
+    background-color: #330066; /* Dark purple for text background */
+    height: 8vh;
+    width: 95%; /* Adjusted width for better proportion on smaller screens */
+    max-width: 350px; /* Added max-width to prevent oversized text box on small screens */
+    position: absolute;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: calc(25vh + 4rem);
+    border: 2px solid #555; /* Border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    overflow: hidden;
+    word-wrap: break-word;
+    font-size: 14px; /* Initial font size */
+}
+
+
+.map {
+    position: absolute;
+    background-color: #113300; /* Darker green for map */
+    height: 25vh;
+    width: 90%; /* Adjusted width for better proportion on smaller screens */
+    max-width: 300px; /* Added max-width to prevent oversized map box on small screens */
+    top: calc(25vh + 6vh + 25vh + 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #555; /* Border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+table {
+    border: 2px solid #555; /* Border color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Movement box for arrows */
+.movementbox {
+    position: absolute;
+    top: calc(25vh + 6vh + 6.5rem);
+    height: 25vh;
+    width: 90%; /* Adjusted width for better proportion on smaller screens */
+    max-width: 300px; /* Added max-width to prevent oversized movement box on small screens */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Movement arrows */
+.movementarrow {
+    background-color: #662200; /* Darker orange for movement arrows */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90vw;
+    }
+
+    .counterbox {
+        right: 3%; /* Adjusted right position for better placement on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95vw;
+    }
+}
+
+#up {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#down {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#left {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#right {
+    grid-column: 3;
+    grid-row: 2;
+}
