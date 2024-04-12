@@ -259,7 +259,7 @@ function updatePicture(playerX, playerY, catPositions, zombiePositions) {
     let pictures = [];
     for (let i = 0; i <= 6; i++) {
         for (let j = 0; j <= 6; j++) {
-            let woodIdentifier = i * 6 + j + 1; // Unique identifier for each place
+            let woodIdentifier = i * 6 + j + 1; 
             if (catPositions.some(cat => cat.x === i && cat.y === j)) {
                 pictures.push("cat");
             } 
@@ -278,12 +278,10 @@ function updatePicture(playerX, playerY, catPositions, zombiePositions) {
     let picture = pictures[pictureIndex];
     let pictureElement = document.querySelector(".picture");
 
-    // Get the base URL of the current script
     const scriptUrl = document.currentScript.src;
     const scriptPath = scriptUrl.substring(0, scriptUrl.lastIndexOf("/") + 1);
     const imagePath = scriptPath + `../images/${picture}.jpg`;
 
-    // Set the src attribute of the pictureElement
     pictureElement.src = imagePath;
 }
 function norrisApi(query) {
